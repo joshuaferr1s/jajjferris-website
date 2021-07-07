@@ -1,6 +1,3 @@
----
-import Tour from "../components/Tour.astro";
----
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,14 +9,51 @@ import Tour from "../components/Tour.astro";
 </head>
 <body>
   <main>
-    <header>
-      <div>
-        <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
-        <h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
+    <header class="header">
+      <div class="header--image-container">
+        <img class="header--image" src="/assets/josh.jpeg" alt="Josh" />
+      </div>
+      <div class="header--info">
+        <h1 class="header--info-name">Joshua Ferris</h1>
+        <p class="header--info-position">Visiting Instructor at Miami University</p>
+        <span>
+          <a class="header--info-social" href="mailto:ferrisj2@miamioh.edu" target="_blank">Email</a>
+          <span> | </span>
+          <a class="header--info-social" href="https://github.com/joshuaferr1s/" target="_blank">Github</a>
+        </span>
       </div>
     </header>
-
-    <Tour />
+    <br>
+    <br>
+    <h1 class="global--section-title">About Me</h1>
+    <br>
+    <div class="about--container">
+      <p>I was born and raised in the United Kingdom. Throughout high school, I spent my time studying mathematics and programming text-based RPG games in Batch, Python, and Javascript. I attended the University of York to get my bachelor's in mathematics, in which I obtained an upper second-class.</p>
+      <br>
+      <p>During college, I spent my summers at YMCA Camp Kern in Ohio. Starting as an equestrian camp counselor, I found my confidence, passion for education, and love of aquatic safety. Through my four years on staff, I worked my way from counselor to assistant equestrian director, and finally pool director after getting my instructor certifications for YMCA lifeguarding and ASHI CPR/first aid/emergency O2. It was at camp that I met my wife and moved to the states after getting married.</p>
+      <br>
+      <p>Once I had immigration status I attended Miami University to obtain a master's in business analytics as a member of the inaugural cohort. I am now a visiting instructor at Miami University teaching Introduction to Computational Thinking for Business (BUS 104) as part of the business core program.</p>
+    </div>
+    <br>
+    <br>
+    <h1 class="global--section-title">Portfolio</h1>
+    <br>
+    <div class="portfolio--container">
+      <div class="portfolio--item">
+        <h3>Master's Practicum - DHL Supply Chain</h3>
+        <p>I Led a 4-person student team to apply data analytics to a subset of DHL Supply Chain data in a semester-long project. The team had to scope the problem, produce an analytics solution, and present the findings to the client. Our client was "literally blown away" by the solution and technical ability shown by the team.</p>
+        <hr class="portfolio--divider">
+      </div>
+      <div class="portfolio--item">
+        <h3>My Sentence Builder</h3>
+        <p>I am currently working on a website for a researcher and clinician at the Communication Sciences & Disorders department of the University of Cincinnati. The website will allow clinicians to perform tests on children and record data for the study.</p>
+        <hr class="portfolio--divider">
+      </div>
+      <div class="portfolio--item">
+        <h3>Clickr</h3>
+        <p>Created a website to allow front of house staff to track the number of guests in each screening for budgeting and fire safety purposes. Coded using open-source software that has developed through the years of maintenance from Python to JavaScript frameworks such as Vue.js.</p>
+      </div>
+    </div>
   </main>
 </body>
 </html>
