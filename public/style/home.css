@@ -44,7 +44,11 @@
 
 .header--info-social {
   text-decoration: none;
-  color: inherit;
+  color: #FF5D01;
+}
+
+.header--info-social:hover {
+  text-decoration: underline;
 }
 
 /* About Me */
@@ -78,12 +82,11 @@
 
 .portfolio--item-link {
   text-decoration: none;
-  color: inherit;
+  color: #FF5D01;
 }
 
 .portfolio--item-link:hover {
-  cursor: pointer;
-  color: #FF5D01;
+  text-decoration: underline;
 }
 
 .portfolio--divider {
