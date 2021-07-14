@@ -1,0 +1,42 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+
+const {
+  content: {
+    title, description, ttm, servings,
+    ingredients, steps, permalink
+  }
+} = Astro.props;
+---
+
+<html lang="en">
+<head>
+  <BaseHead title={title} description={description} permalink={permalink} />
+  <link rel="stylesheet" href="/style/tasty.css" />
+</head>
+<body>
+  <main>
+    <header class="header">
+      <h1>
+        <a href="/tasty" class="header--title">Tasty</a>
+      </h1>
+      <h2 class="header--recipe">{title}</h2>
+      <span class="header--info">{ttm} mins | {servings} Servings</span>
+    </header>
+    <div class="recipe--container">
+      <div class="recipe--panel">
+        <h3 class="recipe--panel-title">Ingredients</h3>
+        <ul class="recipe--panel-list">
+          {ingredients.map(el => (<li class="recipe--panel-list-item mb">- {el}</li>))}
+        </ul>
+      </div>
+      <div class="recipe--panel">
+        <h3 class="recipe--panel-title">Steps</h3>
+        <ol>
+          {steps.map(el => (<li class="mb">{el}</li>))}
+        </ol>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -59,6 +59,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .portfolio--item {
@@ -73,6 +74,16 @@
   border-left: none;
   border-right: 5px solid #595959;
   padding-right: .75rem;
+}
+
+.portfolio--item-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio--item-link:hover {
+  cursor: pointer;
+  color: #FF5D01;
 }
 
 .portfolio--divider {

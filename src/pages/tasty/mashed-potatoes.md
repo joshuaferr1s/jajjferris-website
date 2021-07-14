@@ -1,0 +1,27 @@
+---
+title: "Instant Pot Mashed Potatoes"
+description: "Some description here."
+ttm: 20
+servings: 6
+ingredients: [
+  "3 pounds of potatoes",
+  "water to cover potatoes",
+  "2 teaspoons salt",
+  "¼ cup of butter",
+  "¼ cup of sour cream",
+  "¼ cup of milk",
+  "½ teaspoon of garlic powder",
+  "½ teaspoon of pepper"
+]
+steps: [
+  "Place the peeled and sliced potatoes into the bottom of the instant pot.",
+  "Cover with water and add 1 teaspoon of salt.",
+  "Place the lid on the instant pot and set the valve to seal.",
+  "Cook on manual pressure for 8 minutes.",
+  "When the timer goes off, turn the instant pot off.",
+  "Quick release the pressure from the pot.",
+  "Drain the potatoes and return to the instant pot.",
+  "Add the remaining salt, pepper, garlic powder, butter, milk and sour cream to the potatoes. Mash until smooth."
+]
+layout: "../../layouts/Recipe.astro"
+---

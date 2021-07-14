@@ -1,11 +1,15 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+
+let title = "Joshua Ferris";
+let description = "Joshua Ferris's Personal Website.";
+let permalink = 'https://jajjferris.com/';
+---
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Joshua Ferris</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="stylesheet" href="/style/global.css">
-  <link rel="stylesheet" href="/style/home.css">
+  <BaseHead title={title} description={description} permalink={permalink} />
+  <link rel="stylesheet" href="/style/home.css" />
 </head>
 <body>
   <main>
@@ -25,7 +29,7 @@
     </header>
     <br>
     <br>
-    <h1 class="global--section-title">About Me</h1>
+    <h2 class="global--section-title">About Me</h2>
     <br>
     <div class="about--container">
       <p>I was born and raised in the United Kingdom. Throughout high school, I spent my time studying mathematics and programming text-based RPG games in Batch, Python, and Javascript. I attended the University of York to get my bachelor's in mathematics, in which I obtained an upper second-class.</p>
@@ -36,7 +40,7 @@
     </div>
     <br>
     <br>
-    <h1 class="global--section-title">Portfolio</h1>
+    <h2 class="global--section-title">Portfolio</h2>
     <br>
     <div class="portfolio--container">
       <div class="portfolio--item">
@@ -52,6 +56,10 @@
       <div class="portfolio--item">
         <h3>Clickr</h3>
         <p>Created a website to allow front of house staff to track the number of guests in each screening for budgeting and fire safety purposes. Coded using open-source software that has developed through the years of maintenance from Python to JavaScript frameworks such as Vue.js.</p>
+      </div>
+      <div class="portfolio--item">
+        <h3>Tasty</h3>
+        <p>Ad-filled recipe websites have always driven me crazy and so I made my own for our family favorites. It can be viewed <a href="/tasty" class="portfolio--item-link">here</a>.</p>
       </div>
     </div>
   </main>
