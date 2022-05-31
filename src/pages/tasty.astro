@@ -5,11 +5,11 @@ let title = "Joshua Ferris | Tasty";
 let description = "A collection of our favorite recipes.";
 let permalink = 'https://jajjferris.com/tasty';
 
-let allRecipes = Astro.fetchContent('./tasty/*.md');
+let allRecipes = await Astro.glob('./tasty/*.md');
 
 allRecipes = allRecipes.sort((a, b) => {
-  let textA = a.title.toUpperCase();
-  let textB = b.title.toUpperCase();
+  let textA = a.frontmatter.title.toUpperCase();
+  let textB = b.frontmatter.title.toUpperCase();
   return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
 });
 ---
@@ -28,8 +28,8 @@ allRecipes = allRecipes.sort((a, b) => {
     <div class="tasty--container">
       {allRecipes.map(recipe => (
         <a href={recipe.url} class="tasty--item">
-          <h2 class="tasty--item-title">{recipe.title}</h2>
-          <span>{recipe.ttm} mins | {recipe.servings} Servings</span>
+          <h2 class="tasty--item-title">{recipe.frontmatter.title}</h2>
+          <span>{recipe.frontmatter.ttm} mins | {recipe.frontmatter.servings} Servings</span>
         </a>
       ))}
     </div>
